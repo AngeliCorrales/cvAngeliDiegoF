@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
         boton.addEventListener('click', () => {
             // Obtén los datos del producto
             const id = boton.getAttribute('data-id');
-            const nombre = boton.getAttribute('data-nombre'); // Recupera el nombre
-            const precio = parseFloat(boton.getAttribute('data-precio')); // Recupera el precio como número
+            const nombre = boton.getAttribute('data-nombre');
+            const precio = parseFloat(boton.getAttribute('data-precio'));
 
             // Verifica si los datos están correctos
             if (!nombre || isNaN(precio)) {
@@ -21,19 +21,32 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            // Agrega el producto al carrito
-            agregarAlCarrito(id, nombre, precio);
+            // Agrega el producto al carrito o actualiza su cantidad
+            agregarOActualizarProducto(id, nombre, precio);
         });
     });
 });
 
-// Función para agregar productos al carrito
-function agregarAlCarrito(id, nombre, precio) {
-    // Crea un objeto producto
-    const producto = { id, nombre, precio };
+// Función para agregar o actualizar productos en el carrito
+function agregarOActualizarProducto(id, nombre, precio) {
+    // Busca el producto en el carrito por su id
+    const productoExistente = carrito.find(producto => producto.id === id);
 
-    // Agrega el producto al array carrito
-    carrito.push(producto);
+    if (productoExistente) {
+        // Si el producto ya existe, incrementa la cantidad y actualiza el subtotal
+        productoExistente.cantidad++;
+        productoExistente.subtotal += precio;
+    } else {
+        // Si el producto no existe, crea uno nuevo con cantidad inicial de 1
+        const nuevoProducto = {
+            id,
+            nombre,
+            precio,
+            cantidad: 1,
+            subtotal: precio
+        };
+        carrito.push(nuevoProducto);
+    }
 
     // Actualiza el total
     total += precio;
@@ -55,21 +68,21 @@ function mostrarCarrito() {
         carritoItems.innerHTML += `
             <tr>
                 <td>${producto.nombre}</td>
-                <td>${producto.precio} Bs</td>
+                <td>${producto.cantidad}</td>
+                <td>${producto.subtotal} Bs</td>
                 <td><button class="btn btn-danger btn-sm" onclick="eliminarProducto(${index})">Eliminar</button></td>
             </tr>
         `;
     });
 
     // Actualiza el total en la página
-    
     totalPrecio.innerText = total;
 }
 
 // Función para eliminar un producto del carrito
 function eliminarProducto(index) {
-    // Resta el precio del producto al total
-    total -= carrito[index].precio;
+    // Resta el subtotal del producto al total
+    total -= carrito[index].subtotal;
 
     // Elimina el producto del array
     carrito.splice(index, 1);

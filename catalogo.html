@@ -11,25 +11,28 @@
     <header class="bg-primary text-white text-center p-4">
         <h1>Catálogo</h1>
     </header>
-    " id="navbarNav">
-                <ul class="navbar-nav"><nav class="navbar navbar-expand-lg navbar-light bg-light">
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Catalogo</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos Pasados</a></li>
                     <li class="nav-item"><a class="nav-link" href="registro.html">Registro</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+   
     
     <div class="img" >
         <div class="card">
            <div class="row">
-                <div class="col-md-3" sillasTifany>
+                <div class="col-md-6" sillasTifany>
                     <img src="img/sillastifany.jpeg" class="card-img-top" alt="tifany">
                     <h5 class="card-title">Mesas con 10 sillas tifany Mayores</h5>
                     <p class="card-text">Precio: 100 Bs</p>
@@ -41,30 +44,19 @@
                         Agregar al carrito
                     </button>
                 </div> 
-                <div class="col-md-3" SillaVestidas>
+                <div class="col-md-6" SillaVestidas>
                     <img src="img/sillas vestidas.jpeg" class="card-img-top" alt="vestidas" >
                     <h5 class="card-title">Mesas con 10 sillas vestidas Mayores</h5>
                     <p class="card-text">Precio: 60 Bs</p>
                     <button 
                         class="btn btn-primary agregar-carrito" 
-                        data-id="1" 
+                        data-id="2" 
                         data-nombre="Mesas con 10 sillas vestidas Mayores" 
                         data-precio="60">
                         Agregar al carrito
                     </button>
                 </div>
-                <div class="col-md-6">
-                    <img src="img/sillasniños.jpg" class="card-img-top" alt="sillasNiños" >
-                    <h5 class="card-title">Mesas con 6 sillas tifany niños</h5>
-                    <p class="card-text">Precio: 45 Bs</p>
-                    <button 
-                        class="btn btn-primary agregar-carrito" 
-                        data-id="1" 
-                        data-nombre="Mesas con 6 sillas tifany niños" 
-                        data-precio="45">
-                        Agregar al carrito
-                    </button>
-                </div>
+               
             </div>        
            </div>                                                                                                                                     
         </div>
@@ -79,79 +71,80 @@
                     <p class="card-text">Precio: 50 Bs</p>
                     <button 
                         class="btn btn-primary agregar-carrito" 
-                        data-id="1" 
+                        data-id="3" 
                         data-nombre="Mesas con 10 sillas blancas Mayores" 
                         data-precio="50">
                         Agregar al carrito
                     </button>
                 </div>
-                <div class="col-md-4" Altar15>
-                    <img src="img/15.jpg" class="card-img-top" alt="Altar" >
-                    <h5 class="card-title">Altar de 15 años</h5>
-                    <p class="card-text">Precio: 700 Bs</p>
+                <div class="col-md-6">
+                    <img src="img/sillasniños.jpg" class="card-img-top" alt="sillasNiños" >
+                    <h5 class="card-title">Mesas con 6 sillas tifany niños</h5>
+                    <p class="card-text">Precio: 45 Bs</p>
                     <button 
                         class="btn btn-primary agregar-carrito" 
-                        data-id="1" 
-                        data-nombre="Altar de 15 años" 
-                        data-precio="700">
+                        data-id="4" 
+                        data-nombre="Mesas con 6 sillas tifany niños" 
+                        data-precio="45">
                         Agregar al carrito
                     </button>
                 </div>
+                
             </div>
         </div>
     </div>
+   
     <div class="img" >
-        <div class="card">
-            
-        </div>
-    </div>
-    <div class="img" >
-        <div class="card">
-            
-            
-        </div>
-    </div>
-    <div class="img" >
-        <div class="card">
-            <img src="img/AltarNovios.jpg" class="card-img-top" alt="AltarNovios" >
-            <div class="card-body">
+        <div class="card">  
+            <div class="row">
+            <div class="col-md-6">
+                x<img src="img/AltarNovios.jpg" class="card-img-top" alt="AltarNovios" >
                 <h5 class="card-title">Altar Novios</h5>
                 <p class="card-text">Precio: 300 Bs</p>
                 <button 
                     class="btn btn-primary agregar-carrito" 
-                    data-id="1" 
+                    data-id="5" 
                     data-nombre="Altar Novios" 
                     data-precio="300">
                     Agregar al carrito
                 </button>
             </div>
-        </div>
-    </div>
-    <div class="img" >
-        <div class="card">
-            <img src="img/altar.jpg" class="card-img-top" alt="altar" >
-            <div class="card-body">
-                <h5 class="card-title">Altar de Cumpleaños</h5>
-                <p class="card-text">Precio: 450 Bs</p>
+            <div class="col-md-6" Altar15>
+                <img src="img/15.jpg" class="card-img-top" alt="Altar" >
+                <h5 class="card-title">Altar de 15 años</h5>
+                <p class="card-text">Precio: 700 Bs</p>
                 <button 
                     class="btn btn-primary agregar-carrito" 
-                    data-id="1" 
-                    data-nombre="Altar de Cumpleaños	" 
-                    data-precio="450 bs">
+                    data-id="6" 
+                    data-nombre="Altar de 15 años" 
+                    data-precio="700">
                     Agregar al carrito
                 </button>
             </div>
         </div>
     </div>
     <div class="img" >
-        <div class="card">
-            <img src="img/362690557_1295861364627802_5096632855786053857_n.jpg" class="card-img-top" alt="altar" >
-            <div class="card-body">
+        <div class="card">  
+            <div class="row">
+            <div class="col-md-6">
+                <img src="img/altar.jpg" class="card-img-top" alt="altar" >
+                <h5 class="card-title">Altar de Cumpleaños</h5>
+                <p class="card-text">Precio: 450 Bs</p>
+                <button 
+                    class="btn btn-primary agregar-carrito" 
+                    data-id="7" 
+                    data-nombre="Altar de Cumpleaños	" 
+                    data-precio="450 bs">
+                    Agregar al carrito
+                </button>
+            </div>
+            <div class="col-md-6">
+                <img src="img/362690557_1295861364627802_5096632855786053857_n.jpg" class="card-img-top" alt="altar" >
                 <h5 class="card-title">Altar de Graduacion</h5>
                 <p class="card-text">Precio: 450 Bs</p>
                 <button 
                     class="btn btn-primary agregar-carrito" 
-                    data-id="1" 
+                    data-id="8" 
                     data-nombre="Altar de Graduacion" 
                     data-precio="450 bs">
                     Agregar al carrito
@@ -159,15 +152,18 @@
             </div>
         </div>
     </div>
+   
     <div class="img" >
-        <div class="card">
+        <div class="card">  
+            <div class="row">
+        <div class="col-md-6">
             <img src="img/tematica.jpg" class="card-img-top" alt="tematica" >
             <div class="card-body">
                 <h5 class="card-title">Altar con Tematica</h5>
                 <p class="card-text">Precio: 600 Bs</p>
                 <button 
                     class="btn btn-primary agregar-carrito" 
-                    data-id="1" 
+                    data-id="9" 
                     data-nombre="Altar con Tematica" 
                     data-precio="600 bs">
                     Agregar al carrito
